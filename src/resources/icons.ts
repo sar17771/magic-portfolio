@@ -27,9 +27,17 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+  SiAdobepremierepro,
+  SiAdobeaftereffects,
+  SiAdobelightroom,
+  SiMicrosoftpowerpoint,
+  SiWordpress,
+  SiElementor,
 } from "react-icons/si";
 
-import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
+import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, FaPhone, FaInstagram } from "react-icons/fa6";
 
 export const iconLibrary: Record<string, IconType> = {
   arrowUpRight: HiArrowUpRight,
@@ -63,6 +71,16 @@ export const iconLibrary: Record<string, IconType> = {
   whatsapp: FaWhatsapp,
   reddit: FaReddit,
   telegram: FaTelegram,
+  phone: FaPhone,
+  instagram: FaInstagram,
+  illustrator: SiAdobeillustrator,
+  photoshop: SiAdobephotoshop,
+  premierepro: SiAdobepremierepro,
+  aftereffects: SiAdobeaftereffects,
+  lightroom: SiAdobelightroom,
+  powerpoint: SiMicrosoftpowerpoint,
+  wordpress: SiWordpress,
+  elementor: SiElementor,
 };
 
 export type IconLibrary = typeof iconLibrary;

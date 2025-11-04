@@ -2,14 +2,14 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Logo, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Nicholson Nicholas",
+  lastName: "Nicholas",
+  name: `Nicholson Nicholas`,
+  role: "Graphic Designer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "crouchrollsleep@gmail.com",
+  location: "Asia/Kuala_Lumpur", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Bahasa Malaysia"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
@@ -22,19 +22,14 @@ const social: Social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
   {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system",
+    name: "Phone",
+    icon: "phone",
+    link: "tel:+60149577144",
   },
   {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    name: "Instagram",
+    icon: "instagram",
+    link: "https://www.instagram.com/nechalson",
   },
   {
     name: "Email",
@@ -65,14 +60,13 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm Selene, a design engineer at{" "}
+      I'm Nicholson Nicholas, a graphic designer at{" "}
       <Logo
         dark
-        icon="/trademarks/wordmark-dark.svg"
+        icon="/images/logo.png"
         style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}
       />
-      , where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      , where I craft creative designs that reflect a brand's value and objectives.
     </>
   ),
 };
@@ -98,9 +92,7 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        A graphic designer specializing in brand identities and logo design, with 6+ years of experience spanning freelance and professional work. I excel at transforming ideas into creative designs that reflect a brand's value and objectives. Committed to delivering high-quality work that achieves impactful results while paying attention to every detail. Passionate about continuous learning and enhancing my design skills.
       </>
     ),
   },
@@ -109,42 +101,38 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: " JSK Group of Companies ",
+        timeframe: "2025 - Present",
+        role: "Senior Graphic Designer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: " G & A Group ",
+        timeframe: "2018 - 2025",
+        role: "Senior Graphic Designer cum Media Executive ",
         achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
+        ],
+        images: [
+          // optional: leave the array empty if you don't want to display images
+        ],
+      },
+      {
+        company: "Freelance Graphic Designer ",
+        timeframe: "2022 - Present",
+        role: "Freelancer ",
+        achievements: [
+        ],
+        images: [],
+      },
+      {
+        company: "Kementerian Kerajaan Tempatan dan Perumahan  ",
+        timeframe: "2017",
+        role: "IT Intern ",
+        achievements: [
         ],
         images: [],
       },
@@ -155,12 +143,16 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: " Cosmopoint College Kota Kinabalu",
+        description: <>Information Technology.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Self Learning",
+        description: <>Graphic Design and Web Development.</>,
+      },
+      {
+        name: "Self Learning",
+        description: <>Videography and Video Editing </>,
       },
     ],
   },
@@ -169,61 +161,88 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Creative Skills",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Specialized in creating compelling visual designs and multimedia content for brands and businesses.</>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Logo & Branding",
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            name: "Social Media Designs",
+          },
+          {
+            name: "Design Marketing Ads",
+          },
+          {
+            name: "Printing Designs",
+          },
+          {
+            name: "Corporate Event Flyers",
+          },
+          {
+            name: "Presentation Slides",
+          },
+          {
+            name: "Videography",
+          },
+          {
+            name: "Video Editing",
+          },
+          {
+            name: "Photography",
+          },
+          {
+            name: "e-Commerce Live Streaming",
           },
         ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "Software",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Proficient in industry-standard design and video editing software for creating professional work.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Illustrator",
+            icon: "illustrator",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "Photoshop",
+            icon: "photoshop",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Premiere Pro",
+            icon: "premierepro",
+          },
+          {
+            name: "After Effects",
+            icon: "aftereffects",
+          },
+          {
+            name: "Lightroom",
+            icon: "lightroom",
+          },
+          {
+            name: "Microsoft PowerPoint",
+            icon: "powerpoint",
+          },
+          {
+            name: "VMix Broadcasting Software",
+          },
+          {
+            name: "Elementor",
+            icon: "elementor",
+          },
+          {
+            name: "WordPress",
+            icon: "wordpress",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },  
+        images: [],
+      },
     ],
   },
 };
