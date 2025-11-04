@@ -32,7 +32,6 @@ import {
   SiAdobepremierepro,
   SiAdobeaftereffects,
   SiAdobelightroom,
-  SiMicrosoftpowerpoint,
   SiWordpress,
   SiElementor,
 } from "react-icons/si";
@@ -78,7 +77,7 @@ export const iconLibrary: Record<string, IconType> = {
   premierepro: SiAdobepremierepro,
   aftereffects: SiAdobeaftereffects,
   lightroom: SiAdobelightroom,
-  powerpoint: SiMicrosoftpowerpoint,
+  powerpoint: HiOutlineDocument,
   wordpress: SiWordpress,
   elementor: SiElementor,
 };
