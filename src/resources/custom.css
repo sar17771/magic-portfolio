@@ -52,3 +52,81 @@
   --scheme-neutral-600-50: rgba(137,152,159,0.5);
   /*
 }*/
+
+/* Smooth scrolling handled by Lenis */
+
+.avatar-wave-container {
+  width: fit-content;
+  height: fit-content;
+  min-width: 20rem;
+  min-height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wave-ring {
+  position: absolute;
+  border: 2px solid rgba(111, 148, 241, 0.5);
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+  opacity: 0;
+  animation: waveExpand 3s ease-out infinite;
+  pointer-events: none;
+}
+
+.wave-ring-1 {
+  animation-delay: 0s;
+}
+
+.wave-ring-2 {
+  animation-delay: 1.5s;
+}
+
+.wave-ring-3 {
+  animation-delay: 3s;
+}
+
+@keyframes waveExpand {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+    border-width: 2px;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+/* Mobile fixes for social icons */
+@media (max-width: 768px) {
+  .avatar-wave-container {
+    min-width: 16rem;
+    min-height: 16rem;
+  }
+
+  .wave-ring {
+    width: 16rem;
+    height: 16rem;
+  }
+
+  .social-icons-row {
+    gap: 0.75rem !important;
+  }
+
+  .social-icon-wrapper {
+    transform: scale(1.2);
+  }
+}
+
+@media (min-width: 769px) {
+  .social-icon-wrapper {
+    transform: scale(1.5);
+  }
+}
