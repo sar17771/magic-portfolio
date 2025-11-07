@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Nicholson Nicholas",
   lastName: "Nicholas",
   name: `Nicholson Nicholas`,
-  role: "Graphic Designer",
+  role: "Experienced Graphic Designer",
   avatar: "/images/avatar-v2.png",
   email: "crouchrollsleep@gmail.com",
   location: "Asia/Kuala_Lumpur", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
@@ -102,7 +102,7 @@ const about: About = {
     experiences: [
       {
         company: " JSK Group of Companies ",
-        timeframe: "2025 - Present",
+        timeframe: "Feb 2025 - Nov 2025",
         role: "Senior Graphic Designer",
         achievements: [
         ],
@@ -259,7 +259,7 @@ const blog: Blog = {
 const work: Work = {
   path: "/work",
   label: "Work",
-  title: `Projects – ${person.name}`,
+  title: `Projects by Me`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes

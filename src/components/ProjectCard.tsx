@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
   AvatarGroup,
   Carousel,
@@ -9,6 +10,7 @@ import {
   SmartLink,
   Text,
 } from "@once-ui-system/core";
+import { ImageZoomModal } from "@/components/ImageZoomModal";
 
 interface ProjectCardProps {
   href: string;
@@ -30,15 +32,35 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   avatars,
   link,
 }) => {
+  const [zoomIndex, setZoomIndex] = useState<number | null>(null)
+
+  const handleImageClick = (index: number) => {
+    setZoomIndex(index)
+  }
+
   return (
     <Column fillWidth gap="m">
-      <Carousel
-        sizes="(max-width: 960px) 100vw, 960px"
-        items={images.map((image) => ({
-          slide: image,
-          alt: title,
-        }))}
-      />
+      <div
+        onClick={() => handleImageClick(0)}
+        style={{ cursor: "pointer" }}
+      >
+        <Carousel
+          sizes="(max-width: 960px) 100vw, 960px"
+          items={images.map((image) => ({
+            slide: image,
+            alt: title,
+          }))}
+        />
+      </div>
+      {zoomIndex !== null && (
+        <ImageZoomModal
+          images={images}
+          currentIndex={zoomIndex}
+          isOpen={zoomIndex !== null}
+          onClose={() => setZoomIndex(null)}
+          alt={title}
+        />
+      )}
       <Flex
         s={{ direction: "column" }}
         fillWidth
@@ -49,7 +71,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         {title && (
           <Flex flex={5}>
-            <Heading as="h2" wrap="balance" variant="heading-strong-xl">
+            <Heading as="h2" wrap="balance" variant="heading-strong-xl" className="striking-title">
               {title}
             </Heading>
           </Flex>

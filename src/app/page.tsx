@@ -3,8 +3,9 @@ import {
   Schema,
   Meta,
   RevealFx,
+  Button,
 } from "@once-ui-system/core";
-import { home, about, person, baseURL } from "@/resources";
+import { home, about, person, baseURL, work } from "@/resources";
 import { HomeContent } from "@/components/HomeContent";
 import { Projects } from "@/components/work/Projects";
 
@@ -37,7 +38,20 @@ export default function Home() {
       <HomeContent />
       <div style={{ minHeight: "100vh", position: "relative", zIndex: 1 }}>
         <RevealFx fillWidth paddingTop="xl">
-          <Projects />
+          <Column fillWidth gap="xl" horizontal="center">
+            <Projects range={[1, 3]} />
+            <RevealFx delay={0.3} horizontal="center" paddingTop="l">
+              <Button
+                href={work.path}
+                variant="secondary"
+                size="m"
+                weight="default"
+                arrowIcon
+              >
+                View All Projects
+              </Button>
+            </RevealFx>
+          </Column>
         </RevealFx>
       </div>
     </Column>

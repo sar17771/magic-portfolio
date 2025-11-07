@@ -14,16 +14,31 @@ import {
   SpacingToken,
 } from "@once-ui-system/core";
 import { Footer, Header, RouteGuard, Providers } from "@/components";
-import { baseURL, effects, fonts, style, dataStyle, home } from "@/resources";
+import { baseURL, effects, fonts, style, dataStyle, home, person } from "@/resources";
+import { Metadata } from "next";
 
-export async function generateMetadata() {
-  return Meta.generate({
+export async function generateMetadata(): Promise<Metadata> {
+  const baseMetadata = Meta.generate({
     title: home.title,
     description: home.description,
     baseURL: baseURL,
     path: home.path,
     image: home.image,
   });
+
+  return {
+    ...baseMetadata,
+    icons: {
+      icon: [
+        { url: person.avatar, sizes: "32x32", type: "image/png" },
+        { url: person.avatar, sizes: "16x16", type: "image/png" },
+      ],
+      apple: [
+        { url: person.avatar, sizes: "180x180", type: "image/png" },
+      ],
+      shortcut: person.avatar,
+    },
+  };
 }
 
 export default async function RootLayout({

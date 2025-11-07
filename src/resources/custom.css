@@ -129,4 +129,64 @@
   .social-icon-wrapper {
     transform: scale(1.5);
   }
+
+  .scroll-scale-hero > div {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+
+/* Ensure content fits on larger screens */
+@media (min-width: 1024px) {
+  .avatar-wave-container {
+    min-width: 18rem;
+    min-height: 18rem;
+  }
+
+  .wave-ring {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+/* Striking project titles */
+.striking-title {
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.1 !important;
+  background: linear-gradient(
+    135deg,
+    var(--scheme-brand-600, #6f94f1) 0%,
+    var(--scheme-brand-800, #b2dbff) 50%,
+    var(--scheme-accent-600, #8a989f) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 20px rgba(111, 148, 241, 0.2);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.striking-title:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Minimal animation for person name */
+.animated-name {
+  animation: nameFadeIn 1.2s ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes nameFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }

@@ -28,8 +28,18 @@ export function HomeContent() {
         <FilloutPopup ref={filloutRef} formId="iSYc6sEAzQus" />
       )}
       <ScrollScaleHero>
-        <Column fillWidth horizontal="center" gap="xl">
-          <Column maxWidth="l" horizontal="center" align="center" gap="xl">
+        <Column 
+          fillWidth 
+          horizontal="center" 
+          gap="m"
+          style={{
+            padding: "1rem",
+            maxHeight: "100vh",
+            justifyContent: "center",
+            flex: 1,
+          }}
+        >
+          <Column maxWidth="l" horizontal="center" align="center" gap="m" style={{ width: "100%" }}>
             <RevealFx delay={0.4} horizontal="center">
               {about.avatar.display && (
                 <Column
@@ -58,6 +68,7 @@ export function HomeContent() {
               <Column gap="m" align="center">
                 <Text
                   variant="display-strong-l"
+                  className="animated-name"
                   style={{ cursor: 'pointer' }}
                   onClick={handleOpenFillout}
                 >
@@ -68,24 +79,8 @@ export function HomeContent() {
                 </Text>
               </Column>
             </RevealFx>
-            {about.calendar.display && (
-              <RevealFx delay={0.65} horizontal="center" paddingTop="l">
-                <Button
-                  onClick={handleOpenFillout}
-                  variant="secondary"
-                  size="m"
-                  weight="default"
-                  arrowIcon
-                >
-                  <Row gap="8" vertical="center" paddingRight="4">
-                    <Icon name="calendar" />
-                    Schedule Meeting
-                  </Row>
-                </Button>
-              </RevealFx>
-            )}
             {social.length > 0 && (
-              <RevealFx delay={0.8} horizontal="center" paddingTop="l">
+              <RevealFx delay={0.65} horizontal="center" paddingTop="s">
                 <Row 
                   gap="m" 
                   wrap 
@@ -115,6 +110,22 @@ export function HomeContent() {
                       ),
                   )}
                 </Row>
+              </RevealFx>
+            )}
+            {about.calendar.display && (
+              <RevealFx delay={0.8} horizontal="center" paddingTop="s">
+                <Button
+                  onClick={handleOpenFillout}
+                  variant="secondary"
+                  size="m"
+                  weight="default"
+                  arrowIcon
+                >
+                  <Row gap="8" vertical="center" paddingRight="4">
+                    <Icon name="calendar" />
+                    Schedule Meeting
+                  </Row>
+                </Button>
               </RevealFx>
             )}
           </Column>
